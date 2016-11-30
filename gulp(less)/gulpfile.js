@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2016-11-30 11:19:43
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-11-30 17:11:57
+* @Last Modified time: 2016-11-30 19:30:46
 */
 
 'use strict';
@@ -72,6 +72,9 @@ gulp.task('serve', function() {
     server: {
       baseDir: ['dist']
     },
+    ui:{
+    	port:8080
+    }
   }, function(err, bs) {
     console.log(bs.options.getIn(["urls", "local"]));
   });
