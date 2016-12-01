@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2016-11-30 11:19:43
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-11-30 19:30:46
+* @Last Modified time: 2016-12-01 10:55:04
 */
 
 'use strict';
@@ -16,7 +16,7 @@ var uglify = require('gulp-uglify'); //压缩javascript文件，减小文件大�
 var htmlmin = require('gulp-htmlmin'); //压缩html
 
 // 1. LESS编译 压缩 --合并没有必要，一般预处理CSS都可以导包
-gulp.task("style",function () {
+gulp.task('style',function () {
 	gulp.src(['src/less/*.less', '!src/less/_*.less'])
 		.pipe(less())
 		.pipe(gulp.dest('src/css'))
@@ -36,7 +36,7 @@ gulp.task("style",function () {
 //2.处理JS
 gulp.task('js',function () {
 	gulp.src(['src/js/*.js'])
-		.pipe(concat(all.js))
+		.pipe(concat('all.js'))
 		.pipe(uglify())
 		.pipe(gulp.dist('dist/js'))
 		.pipe(browserSync.reload({
