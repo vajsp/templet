@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2016-11-30 11:19:43
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-12-01 10:55:04
+* @Last Modified time: 2016-12-01 10:59:48
 */
 
 'use strict';
@@ -38,7 +38,7 @@ gulp.task('js',function () {
 	gulp.src(['src/js/*.js'])
 		.pipe(concat('all.js'))
 		.pipe(uglify())
-		.pipe(gulp.dist('dist/js'))
+		.pipe(gulp.dest('dist/js'))
 		.pipe(browserSync.reload({
 		  stream: true
 		}));
