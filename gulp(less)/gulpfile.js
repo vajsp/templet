@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2016-11-30 11:19:43
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-12-01 10:59:48
+* @Last Modified time: 2016-12-02 17:17:23
 */
 
 'use strict';
@@ -14,6 +14,7 @@ var browserSync = require('browser-sync');
 var concat = require('gulp-concat'); //合并
 var uglify = require('gulp-uglify'); //压缩javascript文件，减小文件大小
 var htmlmin = require('gulp-htmlmin'); //压缩html
+var babel = require('gulp-babel');//支持es6
 
 // 1. LESS编译 压缩 --合并没有必要，一般预处理CSS都可以导包
 gulp.task('style',function () {
@@ -36,6 +37,9 @@ gulp.task('style',function () {
 //2.处理JS
 gulp.task('js',function () {
 	gulp.src(['src/js/*.js'])
+		.pipe(babel({
+            presets: ['es2015']
+        }))
 		.pipe(concat('all.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'))
