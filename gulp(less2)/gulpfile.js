@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2016-11-30 11:19:43
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-04-20 13:42:43
+* @Last Modified time: 2017-05-15 15:06:32
 */
 
 'use strict';
@@ -49,13 +49,13 @@ gulp.task('js',function () {
 })
 
 // 3. 图片复制
-// gulp.task('image', function() {
-//   gulp.src('src/images/*.*')
-//     .pipe(gulp.dest('dist/images'))
-//     .pipe(browserSync.reload({
-//       stream: true
-//     }));
-// });
+gulp.task('image', function() {
+  gulp.src('src/images/*.*')
+    .pipe(gulp.dest('dist/images'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
 
 // 4. HTML
 gulp.task('html', function() {
@@ -85,7 +85,7 @@ gulp.task('serve', function() {
 
   gulp.watch('src/less/*.less',['style']);
   gulp.watch('src/js/*.js',['js']);
-  // gulp.watch('src/images/*.*',['image']);
+  gulp.watch('src/images/*.*',['image']);
   gulp.watch('src/*.html',['html']);
 });
 
