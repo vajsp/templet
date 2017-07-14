@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2016-11-30 11:19:43
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-05-15 15:06:32
+* @Last Modified time: 2017-07-14 21:45:17
 */
 
 'use strict';
@@ -73,6 +73,7 @@ gulp.task('html', function() {
 //browserSync服务
 gulp.task('serve', function() {
   browserSync({
+    notify: false,
     server: {
       baseDir: ['dist']
     },
