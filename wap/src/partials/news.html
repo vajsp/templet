@@ -1,0 +1,156 @@
+
+<div class="news">
+    <div class="top">
+        <div class="left">
+            <i class="position_icon"></i>
+            <span>北京地区</span>
+        </div>
+        <div class="right">
+            <i class="search_icon"></i>
+            <input type="text" placeholder="搜索">
+        </div>
+    </div>
+    <div class="news_nav">
+        <ul>
+
+            <li ng-click="tabs(0)" ng-class="{active:isActive==0}">推荐</li>
+            <li ng-click="tabs(1)" ng-class="{active:isActive==1}">行业新闻</li>
+            <li ng-click="tabs(2)" ng-class="{active:isActive==2}">地产大咖</li>
+            <li ng-click="tabs(3)" ng-class="{active:isActive==3}">科技创新</li>
+            <li ng-click="tabs(4)" ng-class="{active:isActive==4}">IT人物</li>
+            <li ng-click="tabs(5)" ng-class="{active:isActive==5}"><i class="icon_add"></i></li>
+
+            <!--<li ><a ui-sref="recommend">推荐</a></li>-->
+            <!--<li class="active"><a ui-sref="industry">行业新闻</a></li>-->
+            <!--<li><a ui-sref="estate">地产大咖</a></li>-->
+            <!--<li><a ui-sref="science">科技创新</a></li>-->
+            <!--<li><a ui-sref="it">IT人物</a></li>-->
+            <!--<li><a ui-sref="add">+</a></li>-->
+        </ul>
+    </div>
+
+    <div class="logos">
+        <ul>
+            <li ng-repeat="logo in logos" ng-click="showLogoDetail()"><a   ui-sref="bgy({id:1})"><img class="icon_7" ng-src="{{logo.url}}"><span>{{logo.name}}</span></a></li>
+            <!--<li><a   ui-sref="wd"><img class="icon_8" src="/images/icon/icon_8.png"><span>万达</span></a></li>-->
+            <!--<li><a   ui-sref="wk"><img class="icon_9" src="/images/icon/icon_9.png"><span>万科</span></a></li>-->
+            <!--<li><a   ui-sref="hd"><img class="icon_10" src="/images/icon/icon_10.png"><span>恒大</span></a></li>-->
+            <!--<li><a   ui-sref="hxxf"><img class="icon_11" src="/images/icon/icon_11.png"><span>华夏幸福</span></a></li>-->
+            <!--<li><a   ui-sref="lh"><img class="icon_12" src="/images/icon/icon_12.png"><span>龙湖</span></a></li>-->
+        </ul>
+    </div>
+    <div class="lists">
+        <ul class="list_ul">
+            <li class="clearFix" ng-repeat="item in lists" ng-click="showDetail()">
+                <div class="list_img">
+                    <img ng-src="{{item.url}}" alt="">
+                </div>
+                <div class="list_content">
+                    <div class="list_title">
+                        <h3 class="title">{{item.name}}</h3>
+                        <span class="emotion">正面</span>
+                    </div>
+                    <p class="list_introduce">
+                        <span class="name">东方财富网</span>
+                        <span class="time">2017-09-01</span>
+                    </p>
+                    <div class="share">
+                        <img ng-src="{{item.shareUrl}}" alt="">
+                        <div class="share_title">
+                            {{item.shareTitle}}
+                        </div>
+                    </div>
+                    <div class="tag">
+                        <div class="praise">
+                            <i class="icon_15"></i>
+                            <span>41</span>
+                        </div>
+                        <div class="collect">
+                            <i class="icon_16"></i>
+                            <span>41</span>
+                        </div>
+                        <div class="tag_name">
+                            <!--<span>科技</span>-->
+                            <!--<span>先进</span>-->
+                            <span ng-repeat="tag in item.tag">{{tag}}</span>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <!--<li class="clearFix" ng-click="showDetail()">-->
+                <!--<div class="list_img">-->
+                    <!--<img src="/images/logo/logo_1.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="list_content">-->
+                    <!--<div class="list_title">-->
+                        <!--<h3 class="title">碧桂园集团</h3>-->
+                        <!--<span class="emotion">正面</span>-->
+                    <!--</div>-->
+                    <!--<p class="list_introduce">-->
+                        <!--<span class="name">东方财富网</span>-->
+                        <!--<span class="time">2017-09-01</span>-->
+                    <!--</p>-->
+                    <!--<div class="share">-->
+                        <!--<img src="/images/b.png" alt="">-->
+                        <!--<div class="share_title">-->
+                            <!--碧桂园以总价7.5亿元竟得城东银杏路4号地铁，楼面价5286/㎡-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="tag">-->
+                        <!--<div class="praise">-->
+                            <!--<i class="icon_15"></i>-->
+                            <!--<span>108</span>-->
+                        <!--</div>-->
+                        <!--<div class="collect">-->
+                            <!--<i class="icon_16"></i>-->
+                            <!--<span>20</span>-->
+                        <!--</div>-->
+                        <!--<div class="tag_name">-->
+                            <!--<span>拿地</span>-->
+
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<li class="clearFix" ng-click="showDetail()">-->
+                <!--<div class="list_img">-->
+                    <!--<img src="/images/logo/logo_1.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="list_content">-->
+                    <!--<div class="list_title">-->
+                        <!--<h3 class="title">碧桂园集团</h3>-->
+                        <!--<span class="emotion">正面</span>-->
+                    <!--</div>-->
+                    <!--<p class="list_introduce">-->
+                        <!--<span class="name">东方财富网</span>-->
+                        <!--<span class="time">2017-09-01</span>-->
+                    <!--</p>-->
+                    <!--<div class="share">-->
+                        <!--<img src="/images/c.png" alt="">-->
+                        <!--<div class="share_title">-->
+                            <!--刚刚，碧桂园广州又一写字楼项目亮相。-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="tag">-->
+                        <!--<div class="praise">-->
+                            <!--<i class="icon_15"></i>-->
+                            <!--<span>22</span>-->
+                        <!--</div>-->
+                        <!--<div class="collect">-->
+                            <!--<i class="icon_16"></i>-->
+                            <!--<span>81</span>-->
+                        <!--</div>-->
+                        <!--<div class="tag_name">-->
+                            <!--<span>广州</span>-->
+                            <!--<span>项目</span>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
+
+</div>

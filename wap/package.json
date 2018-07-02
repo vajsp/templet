@@ -1,0 +1,23 @@
+{
+  "author": "Eric Zhao",
+  "name": "EI",
+  "homepage": "http://www.maxrocky.com",
+  "version": "0.0.1-SNAPSHOT",
+  "engines": {
+    "node": ">= 0.8.4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-clean": "*",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-csso": "*",
+    "gulp-delete-lines": "0.0.7",
+    "gulp-jshint": "*",
+    "gulp-less": "*",
+    "gulp-ng-html2js": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*"
+  }
+}

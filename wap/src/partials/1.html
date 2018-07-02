@@ -1,0 +1,118 @@
+
+<div class="news bgy">
+    <div class="top back">
+        <div class="left">
+            <a href="javascript :history.back(-1)">
+                <i class="back_icon"></i>
+            </a>
+        </div>
+        <div class="right title">
+            碧桂园
+        </div>
+    </div>
+    <div class="count_box">
+        <ul class="count">
+            <li><span>5210篇</span><span>新闻总数</span></li>
+            <li><span>211篇</span><span>正面</span></li>
+            <li><span>968篇</span><span>中性</span></li>
+            <li><span>875篇</span><span>负面</span></li>
+        </ul>
+    </div>
+    <div class="words">
+        <div class="titleTab">24小时热词云</div>
+        <div class="hot_words" style="width:100%; height:200px;text-align: center; position: relative">
+            <!--<jqcloud style="margin: 0 auto;" words="words" width="200" height="200" colors="{{colors}}" delay="8"-->
+                     <!--steps="7" font-size="{from:0.12, to:0.08}" removeOverflowing="false"></jqcloud>-->
+            <!--<mrcloud width="750" height="200" dataSrc="{{words}}" onwordclick="onwordclick(i)" ></mrcloud>-->
+            <span ng-repeat="word in words" ng-style="word.style" ><a ng-href="{{word.link}}">{{word.text}}</a></span>
+
+        </div>
+    </div>
+    <div class="emotion_type">
+        <ul class="emotions">
+            <li class="active">全部</li>
+            <li>正面</li>
+            <li>中性</li>
+            <li>负面</li>
+        </ul>
+        <span>
+             <i class="search"></i>
+        </span>
+    </div>
+    <div class="lists">
+        <ul class="list_ul">
+            <li class="clearFix" ng-click="showDetail()">
+                <div class="list_img">
+                    <img src="/images/icon/icon_14.png" alt="">
+                </div>
+                <div class="list_content">
+                    <div class="list_title">
+                        <span class="title">碧桂园集团</span>
+                        <span class="emotion">正面</span>
+                    </div>
+                    <p class="list_introduce">
+                        <span class="name">东方财富网</span>
+                        <span class="time">2017-09-01</span>
+                    </p>
+                    <div class="share">
+                        <img src="/images/a.png" alt="">
+                        <div class="share_title">
+                            刚刚，碧桂园广州又一写字楼项目亮相。
+                        </div>
+                    </div>
+                    <div class="tag">
+                        <div class="praise">
+                            <i class="icon_15"></i>
+                            <span>41</span>
+                        </div>
+                        <div class="collect">
+                            <i class="icon_16"></i>
+                            <span>41</span>
+                        </div>
+                        <div class="tag_name">
+                            <span>科技</span>
+                            <span>先进</span>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <li class="clearFix" ng-click="showDetail()">
+                <div class="list_img">
+                    <img src="/images/icon/icon_14.png" alt="">
+                </div>
+                <div class="list_content">
+                    <div class="list_title">
+                        <span class="title">碧桂园集团</span>
+                        <span class="emotion">正面</span>
+                    </div>
+                    <p class="list_introduce">
+                        <span class="name">东方财富网</span>
+                        <span class="time">2017-09-01</span>
+                    </p>
+                    <div class="share">
+                        <img src="/images/b.png" alt="">
+                        <div class="share_title">
+                            碧桂园以总价7.5亿元竟得城东银杏路4号地铁，楼面价5286/㎡
+                        </div>
+                    </div>
+                    <div class="tag">
+                        <div class="praise">
+                            <i class="icon_15"></i>
+                            <span>41</span>
+                        </div>
+                        <div class="collect">
+                            <i class="icon_16"></i>
+                            <span>41</span>
+                        </div>
+                        <div class="tag_name">
+                            <span>拿地</span>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
