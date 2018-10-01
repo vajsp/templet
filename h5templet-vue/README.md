@@ -1,0 +1,1 @@
+#移动h5模板采用了flexible适配方案，scss预处理，vue多页配置，px自动转rem
